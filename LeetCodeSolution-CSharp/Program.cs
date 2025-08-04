@@ -9,6 +9,7 @@ class Program
     {
         var solutions = new Solutions();
         solutions.GetTwoSumSolution();
+        solutions.GetPalindromeSolution();
     }
 }
 
@@ -18,6 +19,16 @@ class Solutions
     {
         var solver = new TwoSum();
         int[] result = solver.Main([2, 7, 11, 15], 9);
-        Console.WriteLine($"Result: [{string.Join(", ", result)}]");
+        Console.WriteLine($"Result TwoSum: [{string.Join(", ", result)}]");
+    }
+
+    internal void GetPalindromeSolution()
+    {
+        var solver = new PalindromeNumber();
+        var resultFirst = solver.IsPalindrome(121);
+        var resultSecond = solver.IsPalindrome(-121);
+        var resultThird = solver.IsPalindrome(10);
+        Console.WriteLine($"Result: 1: {resultFirst} 2:{resultSecond} 3:{resultThird}");
+        
     }
 }
